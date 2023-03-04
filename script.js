@@ -17,4 +17,10 @@ window.onclick = function(event) {
     }
 }
 
-//add close and go to part of page when click on links
+//add close and go to part of page when click on menu links
+const menuLinks = document.querySelectorAll(".menu-modal-body a");
+for (let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].addEventListener("click", () => {
+        modal.style.display = "none";
+    })
+}
