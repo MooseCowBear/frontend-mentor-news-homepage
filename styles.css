@@ -1,6 +1,10 @@
 @font-face {
     font-family: Hanken Grotesk;
-    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype'),
+    url(./assets/fonts/static/Inter-Regular.ttf) format('truetype'),
+    url(./assets/fonts/static/Inter-Bold.ttf) format('truetype'),
+    url(./assets/fonts/static/Inter-ExtraBold.ttf) format('truetype');
+
 }
 
 :root {
@@ -72,7 +76,7 @@ a:not([class]) {
 
 body {
     font-size: 15px;
-    font-family: "Hanken Grotesk", sans-serif; /* add later */
+    font-family: "Hanken Grotesk", sans-serif; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,6 +91,7 @@ header {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    min-width: 35rem;
 }
 
 nav {
@@ -101,9 +106,12 @@ nav a {
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     line-height: 1;
-    font-weight: 900; /*doesnt seem to work */
+}
+
+h1, h2, h3 {
+    font-weight: bolder; /* doesn't seem to work... */
 }
 
 h1, #trending h3 {
@@ -113,7 +121,7 @@ h1, #trending h3 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 0.8em;
 }
 
 .above-fold {
@@ -124,6 +132,7 @@ main {
 .featured-article article {
     display: flex;
     margin: 2em 0;
+    gap: 3em;
 }
 
 .featured-article div {
@@ -131,8 +140,12 @@ main {
     flex-direction: column;
     gap: 1em;
     align-items: flex-start;
+    max-width: 50.5%
 }
 
+.featured-article summary {
+    font-size: 0.9em;
+}
 
 button {
     border: none;
@@ -147,17 +160,18 @@ button {
 #new {
     background-color: var(--titles);
     color: var(--text-tertiary);
-    padding: 1em 1.1em;
+    padding: 1.2em 1.1em 0.5em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 17em;
+    min-width: 17.7em;
     max-height: 27em;
 }
 
 #new h2 {
     color: var(--highlight-one);
     font-size: 2em;
+    margin-bottom: -0.5em;
 }
 
 #new h3 {
@@ -173,7 +187,6 @@ button {
 #new article {
     padding-bottom: 1.6em;
 }
-
 
 #new article:not(:last-child) {
     border-bottom: 2px solid var(--text-primary);
@@ -213,4 +226,86 @@ button {
 
 .trending-story-wrapper p {
     font-size: 0.8em;
+}
+
+button:hover, 
+button:focus, 
+h1:hover, 
+h1:focus,  
+h3:hover, 
+h3:focus {
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--titles);
+}
+
+#new h3:hover, 
+#new h3:focus, 
+nav a:hover, 
+nav a:focus {
+    color: var(--highlight-one);
+}
+
+#trending h3:hover, #trending h3:focus {
+    color: var(--highlight-two);
+}
+
+.menu {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 2em;
+    }
+    header {
+        min-width: 0; 
+    }
+    nav {
+        display: none;
+    }
+    main {
+        gap: 3em;
+    }
+    .menu {
+        display: inline;
+    }
+    .above-fold {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .featured-article article {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .featured-article div {
+        max-width: 100%;
+    }
+    #trending {
+        grid-template-columns: 1fr;
+    }
+    #new {
+        gap: 1em;
+    }
+    #new h2 {
+        margin-bottom: 0;
+    }
+    .trending-story-wrapper article {
+        margin: 0;
+    }
+    .trending-story-wrapper {
+        gap: 1em;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
 }
