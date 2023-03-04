@@ -1,11 +1,21 @@
 @font-face {
     font-family: Hanken Grotesk;
     src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype'),
-    url(./assets/fonts/static/Inter-Regular.ttf) format('truetype'),
-    url(./assets/fonts/static/Inter-Bold.ttf) format('truetype'),
-    url(./assets/fonts/static/Inter-ExtraBold.ttf) format('truetype');
-
+    url(./assets/fonts/static/Inter-Regular.ttf) format('truetype');
+    font-weight: normal;
 }
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(./assets/fonts/static/Inter-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Hanken Grotesk;
+    src: url(./assets/fonts/static/Inter-ExtraBold.ttf) format('truetype');
+    font-weight: bolder;
+}
+
 
 :root {
     --highlight-one: hsl(35, 77%, 62%);
@@ -111,7 +121,7 @@ h1 {
 }
 
 h1, h2, h3 {
-    font-weight: bolder; /* doesn't seem to work... */
+    font-weight: bolder; 
 }
 
 h1, #trending h3 {
