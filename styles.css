@@ -117,7 +117,7 @@ nav a {
 
 h1 {
     font-size: 3em;
-    line-height: 1;
+    line-height: 0.9;
 }
 
 h1, h2, h3 {
@@ -368,4 +368,14 @@ nav a:focus {
     .mobile {
         display: block;
     }
+}
+
+.attribution {
+    margin-top: 2rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
