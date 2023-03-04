@@ -92,7 +92,7 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
-    padding: 4rem 11rem;
+    padding: 2rem 11rem;
     gap: 2em;
 }
 
@@ -335,6 +335,9 @@ nav a:focus {
     }
     .menu {
         display: inline;
+    }
+    h1 {
+        line-height: 1;
     }
     .above-fold {
         flex-direction: column;
