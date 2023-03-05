@@ -11,7 +11,7 @@ Users should be able to:
 
 ## Screenshot
 
-![alt text](screenshots/desktop.png "")
+![alt text](screenshots/desktop.png "news homepage desktop")
 
 ## Links
 
