@@ -134,7 +134,7 @@ main {
     max-width: 50.5%
 }
 
-.featured-article summary {
+.featured-article p {
     font-size: 0.9em;
 }
 
@@ -362,4 +362,12 @@ nav a:focus {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
